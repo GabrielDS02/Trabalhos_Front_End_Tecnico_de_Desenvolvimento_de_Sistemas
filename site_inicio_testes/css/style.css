@@ -1,0 +1,384 @@
+*
+{
+    margin: 0; /* aqui ja reseta a margem de toda a pagina */
+    padding: 0; /* aqui ja reseta a pading de toda a pagina */
+    box-sizing: border-box; /* box model - importante  */
+}
+
+/* ================================
+   ESTILO GLOBAL DO SITE (BODY)
+   ================================ */
+body 
+{
+    /* Cor de fundo do site inteiro, (um branco suave cansa menos os olhos) */
+    background-color: #f4f6f8;
+    /* Fonte padrão do site, Arial é leve e segura para leitura */
+    font-family: Arial, Helvetica, sans-serif;
+    /* Cor padrão do texto, #222 é um preto mais suave */
+    color: #222;
+    /* Altura da linha, melhora muito a leitura dos textos */
+    line-height: 1.6;
+}
+
+
+/* ================================
+   CABEÇALHO DO SITE (HEADER)
+   ================================ */
+.header-site 
+{
+    /* Espaçamento interno do header, dá "respiro" ao conteúdo */
+    padding: 15px 20px;
+    /* Fundo em gradiente, deixa o visual mais moderno */
+    background: linear-gradient(135deg, #1e3c72, #2a5298);
+    /* Cor do texto dentro do header */
+    color: #ffffff;
+    /* Centraliza textos e elementos */
+    text-align: center;
+    /* Bordas arredondadas, deixa o layout mais suave */
+    border-radius: 12px;
+    /* Espaçamento externo, afasta o header das bordas da página */
+    margin: 15px;
+    /* Sombra do header, cria efeito de profundidade */
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.2);
+    /* Animação suave para efeitos futuros, (hover, transições, etc.) */
+    transition: all 0.3s ease;
+}
+
+.header-site span,
+.header-site strong 
+{
+    letter-spacing: 1px; /* espaçamentos das linhas */
+}
+
+.header-site #main-nav button 
+{
+    background: linear-gradient(135deg, #2563eb, #1e40af);   
+    color: #ffffff;  
+    border: none; /* tira a borda */
+    border-radius: 8px; /* deixa as bordas mais arredondadas */
+    padding: 6px 12px; /* espaçamentos */
+    font-weight: bold;
+    cursor: pointer; /* cursor do mouse em ponteiro */
+    transition: all 0.7s ease; /* transição para o hover */
+}
+
+
+.header-site #main-nav button:hover 
+{
+    background-color: #1e5c72; /* hover para o botão, ele muda ao passar o mouse para essa cor de fundo no botão */
+    color: #691818; /* muda ao passar o mouse a cor da fonyte para branco */
+}
+
+.brand a img
+{
+    width: 60px;
+    border-radius: 10px;
+}
+
+
+.section /* clase principal que muda ja todas as outras ( section )*/
+{
+    /* Fundo em gradiente, deixa o visual mais moderno */
+    background: linear-gradient(135deg, #1e3c72, #2a5298);
+    /* Cor do texto dentro do header */
+    color: #ffffff;
+    /* Centraliza textos e elementos */
+    /* Bordas arredondadas, deixa o layout mais suave */
+    border-radius: 12px;
+    /* Espaçamento externo, afasta o header das bordas da página */
+    margin: 15px;
+    /* Sombra do header, cria efeito de profundidade */
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.2);
+    /* Animação suave para efeitos futuros, (hover, transições, etc.) */
+    transition: all 0.3s ease;
+    
+    max-width: 900px; /* maximo de tamanho., não deixa ocupar a tela toda aos lados */
+    margin: 40px auto; /* margin auto dos lados de 40px */
+    padding: 25px !important;/* Espaçamento interno do header, dá "respiro" ao conteúdo */
+}
+
+.section-intro
+{
+    padding: 30px;
+    text-align: center;
+}
+
+.section-intro p
+{
+    /* Espaçamento interno do header, dá "respiro" ao conteúdo */
+    padding: 15px 20px;
+    /* Fundo em gradiente, deixa o visual mais moderno */
+    background: linear-gradient(135deg, #1e3c72, #2a5298);
+    /* Cor do texto dentro do header */
+    color: #ffffff;
+    /* Centraliza textos e elementos */
+    text-align: center;
+    /* Bordas arredondadas, deixa o layout mais suave */
+    margin: 15px;
+    /* Sombra do header, cria efeito de profundidade */
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.2);
+    /* Animação suave para efeitos futuros, (hover, transições, etc.) */
+    transition: all 0.3s ease;
+    font-weight: bold; /* fonte dando destaque */
+    font-size: 23px;/* tamanho da fonte */
+}
+
+/*===============carrocel=========================*/
+/* section prinmcipal do carrocel ( a div toda do carrocel, das imagens )*/
+.section-intro #div_carrocel 
+{
+    width: 400px;
+    height: 400px;
+    margin: 30px auto 10px;
+    overflow: hidden;
+    border-radius: 16px;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.25);
+    display: flex;
+}
+
+/* seção do carrocel da imagem ( img )*/
+.section-intro #div_carrocel img
+{
+    width: 100%;
+    height: 100%;
+    flex-shrink: 0; /* impede a imagem de encolher */
+    object-fit: cover;
+}
+
+/*=======================importante========================*/
+.carrocel img /* aqui todas as imagens da tela já são ocultadas des do inicio, para mostra so a imagem que tem a class ativa, que ai ativa o ( display: block )*/
+{
+    display: none; /*ocultar a imagem na tela ( display: none )*/
+}
+
+.carrocel img.ativa /* chamamos a class carrocel e depois a img.ativa a imagem com a  class ativa, para ser mostrada na tela */
+{
+    display: block; /*mostrar na tela a imagem ( display: block )*/
+}
+/*=======================importante========================*/
+
+/* Tablets (até 768px) */
+@media (max-width: 768px) {
+    .section-intro #div_carrocel {
+        width: 100%;          /* ocupa quase toda a tela */
+        height: 340px;       /* reduz a altura */
+    }
+}
+
+/* Celulares (até 480px) */
+@media (max-width: 480px) {
+    .section-intro #div_carrocel {
+        width: 100%;          /* quase 100% da tela */
+        height: 340px;       /* altura menor para celular */
+        margin: 20px auto 10px;
+        border-radius: 12px; /* bordas um pouco menores */
+    }
+}
+
+
+/*===============botões do carrocel=========================*/
+/* botões do carrocel */
+.botoes_ant_pro button
+{
+    background: linear-gradient(135deg, #2563eb, #1e40af);   
+    color: #ffffff;                  
+    border: none; /* tira a borda */
+    border-radius: 8px; /* deixa as bordas mais arredondadas */
+    padding: 6px 12px; /* espaçamentos */
+    font-weight: bold; /* fonte bold, a fonte mais com destaque, espessa */
+    cursor: pointer; /* cursor do mouse em ponteiro */
+    transition: all 0.7s ease; /* transição para o hover */
+    font-size: 15px; /* tamanho da fonte */
+}
+
+
+
+.botoes_ant_pro button:hover
+{
+    background-color: #1e5c72; /* hover para o botão, ele muda ao passar o mouse para essa cor de fundo no botão */
+    color: #691818; /* muda ao passar o mouse a cor da fonyte para branco */
+    transform: translateY(-4px); /* Move o botão levemente para cima (efeito de "flutuar") */
+    box-shadow: 0 8px 20px rgba(37, 99, 235, 0.5); /* Cria uma sombra maior e mais intensa abaixo do botão,
+                                                        dando sensação de destaque e profundidade */
+}
+
+/* Quando o botão está sendo clicado (mouse pressionado) */
+.botoes_ant_pro button:active 
+{
+    transform: scale(0.96); /* Diminui levemente o tamanho do botão,
+                               simulando o efeito de "pressionar" */
+}
+
+/*===============carrocel=========================*/
+.section-principal h2
+{
+    /* Espaçamento interno do header, dá "respiro" ao conteúdo */
+    padding: 15px 20px;
+    /* Fundo em gradiente, deixa o visual mais moderno */
+    background: linear-gradient(135deg, #1e3c72, #2a5298);
+    /* Cor do texto dentro do header */
+    color: #ffffff;
+    /* Centraliza textos e elementos */
+    text-align: center;
+    /* Bordas arredondadas, deixa o layout mais suave */
+    margin: 15px;
+    /* Sombra do header, cria efeito de profundidade */
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.2);
+    /* Animação suave para efeitos futuros, (hover, transições, etc.) */
+    transition: all 0.3s ease;
+}
+.section-principal h3
+{
+    /* Espaçamento interno do header, dá "respiro" ao conteúdo */
+    padding: 5px 20px;
+    /* Fundo em gradiente, deixa o visual mais moderno */
+    color: #ffffff;
+    /* Centraliza textos e elementos */
+    text-align: center;
+    /* Bordas arredondadas, deixa o layout mais suave */
+    border-radius: 12px;
+    /* Espaçamento externo, afasta o header das bordas da página */
+    margin: 15px;
+    /* Sombra do header, cria efeito de profundidade */
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.2);
+    /* Animação suave para efeitos futuros, (hover, transições, etc.) */
+    transition: all 0.3s ease;
+    font-weight: bold; /* fonte dando destaque */
+}
+
+.section-secundaria h2
+{
+    /* Espaçamento interno do header, dá "respiro" ao conteúdo */
+    padding: 15px 20px;
+    /* Fundo em gradiente, deixa o visual mais moderno */
+    background: linear-gradient(135deg, #1e3c72, #2a5298);
+    /* Cor do texto dentro do header */
+    color: #ffffff;
+    /* Centraliza textos e elementos */
+    text-align: center;
+    /* Bordas arredondadas, deixa o layout mais suave */
+    margin: 15px;
+    /* Sombra do header, cria efeito de profundidade */
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.2);
+    /* Animação suave para efeitos futuros, (hover, transições, etc.) */
+    transition: all 0.3s ease;
+}
+
+.section-terciaria h2
+{
+    /* Espaçamento interno do header, dá "respiro" ao conteúdo */
+    padding: 15px 20px;
+    /* Fundo em gradiente, deixa o visual mais moderno */
+    background: linear-gradient(135deg, #1e3c72, #2a5298);
+    /* Cor do texto dentro do header */
+    color: #ffffff;
+    /* Centraliza textos e elementos */
+    text-align: center;
+    /* Bordas arredondadas, deixa o layout mais suave */
+    margin: 15px;
+    /* Sombra do header, cria efeito de profundidade */
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.2);
+    /* Animação suave para efeitos futuros, (hover, transições, etc.) */
+    transition: all 0.3s ease;
+}
+
+.table-section h2
+{
+    /* Espaçamento interno do header, dá "respiro" ao conteúdo */
+    padding: 15px 20px;
+    /* Fundo em gradiente, deixa o visual mais moderno */
+    background: linear-gradient(135deg, #1e3c72, #2a5298);
+    /* Cor do texto dentro do header */
+    color: #ffffff;
+    /* Centraliza textos e elementos */
+    text-align: center;
+    /* Bordas arredondadas, deixa o layout mais suave */
+    margin: 15px;
+    /* Sombra do header, cria efeito de profundidade */
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.2);
+    /* Animação suave para efeitos futuros, (hover, transições, etc.) */
+    transition: all 0.3s ease;
+}
+.footer-site
+{
+    /* Espaçamento interno do header, dá "respiro" ao conteúdo */
+    padding: 15px 20px;
+    /* Fundo em gradiente, deixa o visual mais moderno */
+    background: linear-gradient(135deg, #1e3c72, #2a5298);
+    /* Cor do texto dentro do header */
+    color: #ffffff;
+    /* Centraliza textos e elementos */
+    text-align: center;
+    /* Bordas arredondadas, deixa o layout mais suave */
+    border-radius: 12px;
+    /* Espaçamento externo, afasta o header das bordas da página */
+    margin: 15px;
+    /* Sombra do header, cria efeito de profundidade */
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.2);
+    /* Animação suave para efeitos futuros, (hover, transições, etc.) */
+    transition: all 0.3s ease;
+    font-weight: bold; /* fonte dando destaque */
+}
+
+/* ================= TABELAS ================= */
+.table-section 
+{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.table-filosofos,
+.table-visao
+{
+    width: 100%;
+    max-width: 700px;
+    border-collapse: collapse;
+    margin-top: 20px;
+    text-align: left;
+    background-color: #f9f9f9;
+}
+
+/* Cabeçalho */
+.table-filosofos th,
+.table-visao th
+{
+    background-color: #1e2f41;
+    color: #ffffff;
+    padding: 12px;
+    font-weight: bold;
+}
+
+/* Células */
+.table-filosofos td,
+.table-visao td
+{
+    padding: 12px;
+    border-bottom: 1px solid #ddd;
+}
+
+/* Linhas alternadas */
+.table-filosofos tr,
+.table-visao tr
+{
+    background-color: #000000;
+    transition: 0.6s;
+}
+
+/* Hover suave */
+.table-filosofos tr:hover 
+{
+    background-color: #0d8bda;
+}
+
+/* Hover suave */
+.table-visao tr:hover 
+{
+    background-color: #0758d9;
+}
+
+/* Remove a borda padrão do HTML */
+.table-filosofos 
+{
+    border: none;
+}

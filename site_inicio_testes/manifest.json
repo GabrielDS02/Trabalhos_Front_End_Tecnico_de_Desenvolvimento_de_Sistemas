@@ -1,0 +1,14 @@
+{
+  "name": "MR Prestação de Serviços",
+  "short_name": "Alcateia do Ensino",
+  "start_url": "/index.html",
+  "display": "standalone",
+  "background_color": "#f6fbfa",
+  "theme_color": "#2aa79b",
+  "icons": 
+  [
+    { "src": "assets-icons/icon 192-192-AT.png", "sizes": "192x192", "type": "image/png" },
+    { "src": "assets-icons/icon 512-512-AT.png", "sizes": "512x512", "type": "image/png" }
+  ]
+}
+

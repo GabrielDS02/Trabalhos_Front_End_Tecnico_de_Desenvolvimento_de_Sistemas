@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulário de Gabriel</title>
+
+    <!-- css principal -->
+    <link rel="stylesheet" href="css/style.css"></link>
+    
+</head>
+<body>
+
+<section class="section formulario">
+    <form action="sucesso.html" method="GET">
+        <h2>Cadastro</h2>
+
+        <div id="container1">
+            <label id="Nome">Digite seu Nome:</label>
+            <input type="text" name="Nome" id="Nome" placeholder="Nome completo" required></input>
+        </div>
+
+        <div id="container2">
+            <label id="data">Digite sua Data de Nascimento:</label>
+            <input type="date" id="data" name="data"  min=""  max="" placeholder="XX/XX/XXXX" required></input>
+        </div>
+
+        <div id="container3">
+            <label id="email">Digite seu E-mail:</label>
+            <input type="email" name="email" id="email" placeholder="exemplo@gmail.com" required></input>
+        </div>
+
+        <div id="container4">
+            <label id="Senha">Digite sua Senha:</label>
+            <input type="password" name="senha" id="senha" placeholder="xxxxxxx" required></input>
+        </div>
+
+        <div id="container5">
+        <p>Gênero:</p>
+        <label>
+            <input type="radio" name="genero" value="Masculino">
+            Masculino
+        </label>
+        <label>
+            <input type="radio" name="genero" value="Feminino">
+            Feminino
+        </label>
+        <label>
+            <input type="radio" name="genero" value="Outro" id="outro">
+            Outro
+        </label>
+
+        <textarea  id="generoOutro"  name="generoOutro" placeholder="Especifique seu gênero" style="display: none;"></textarea>
+
+        </div>
+
+
+        <div id="container6">
+            <label for="curso">Selecione o curso que deseja:</label>
+
+            <select id="curso" name="curso" required>
+            <option value="" style="display: none;">-- Escolha uma opção --</option>
+            <option value="Técnico em Informática" id="area" >Técnico em Informática</option>
+            <option value="Desenvolvimento de Sistemas" id="area">Desenvolvimento de Sistemas</option>
+            <option value="Redes de Computadores" id="area">Redes de Computadores</option>
+            <option value="Segurança da Informação" id="area">Segurança da Informação</option>
+            </select>
+        </div>
+
+        <button type="submit" id="FormButton" name="FormButton">Enviar</button>
+    </form>
+</section>
+    
+<footer>
+  <div>
+    <h3>Instituto Horizonte Acadêmico</h3>
+    <p>Excelência em educação e desenvolvimento profissional.</p>
+  </div>
+
+  <div>
+    <p>Contato: contato@horizonte.edu.br | (31) 99999-0000</p>
+  </div>
+
+  <div>
+    <p>© 2026 Instituto Horizonte Acadêmico. Todos os direitos reservados.</p>
+  </div>
+</footer>
+    <script src="js/formulario.js" defer></script>
+</body>
+</html>

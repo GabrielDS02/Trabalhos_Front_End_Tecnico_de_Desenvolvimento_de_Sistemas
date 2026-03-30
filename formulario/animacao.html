@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Redirecionando...</title>
+
+<style>
+body {
+  margin: 0;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: linear-gradient(135deg, #1e1e2f, #2b0a3d);
+  font-family: Arial, sans-serif;
+  overflow: hidden;
+  color: white;
+}
+
+.container {
+  text-align: center;
+  animation: fadeIn 1s ease forwards;
+}
+
+.loader {
+  width: 60px;
+  height: 60px;
+  border: 5px solid rgba(255,255,255,0.2);
+  border-top: 5px solid #00ff88;
+  border-radius: 50%;
+  animation: spin 1s linear infinite;
+  margin: 0 auto 20px;
+}
+
+h1 {
+  font-size: 20px;
+  font-weight: 500;
+  letter-spacing: 1px;
+}
+
+.fade-out {
+  animation: fadeOut 0.8s ease forwards;
+}
+
+@keyframes spin {
+  100% { transform: rotate(360deg); }
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: scale(0.95); }
+  to { opacity: 1; transform: scale(1); }
+}
+
+@keyframes fadeOut {
+  to { opacity: 0; transform: scale(1.05); }
+}
+</style>
+</head>
+
+<body>
+
+<div class="container" id="box">
+  <div class="loader"></div>
+  <h1>Voltando</h1>
+</div>
+
+<script>
+const TEMPO = 2500; // tempo antes de redirecionar
+const DESTINO = "index.html"; // coloque sua página aqui
+
+setTimeout(() => {
+  document.getElementById("box").classList.add("fade-out");
+  
+  setTimeout(() => {
+    window.location.href = DESTINO;
+  }, 800);
+
+}, TEMPO);
+</script>
+
+</body>
+</html>

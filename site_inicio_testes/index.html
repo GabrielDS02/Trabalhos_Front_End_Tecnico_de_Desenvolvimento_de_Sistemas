@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Site_Gabriel</title>
+
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+<!-- ================= CABEÇALHO ================= -->
+<header class="header-site">
+
+    <!-- LOGO -->
+    <div class="brand">
+        <a href="#inicio">
+            <img src="assets_logo/filosofo.png" alt="Logo Filosofos">
+        </a>
+        <div class="brand-text">
+            <strong>Filosofia de Gabriel S.</strong> <br>
+            <span>Filósofos Externos</span>
+        </div>
+    </div>
+
+    <!-- BOTÃO MENU -->
+        <nav class="nav-site" id="main-nav">
+            <a href="#inicio"><button>início</button></a>
+            <a href="#filosofia-gabriel"><button>Filosofia de Gabriel</button></a>
+            <a href="#reflexoes-gabriel"><button>Reflexões - Gabriel S.</button></a>
+            <a href="#reflexoes-externos"><button>Reflexões - Filosofos Exteriores.</button></a>
+            <a href="#tabela-frases"><button>Reflexões - Filosofos Exteriores.</button></a>
+            <a href="#tabela-visao"><button>Reflexões - Filosofos Exteriores.</button></a>
+        </nav>
+
+</header>
+
+<hr>
+
+<main>
+
+<!-- ================= INÍCIO ================= -->
+<section id="inicio" class="section section-intro"> <!-- so esse section n a frente e da classe principal então se eu puxar so section la no css eu faço a alteração em todos do site que tem section e na frente da section eu posso puxar com o nome da subclasse dele que so vai mudar nesse campo igual ( section-intro )-->
+    <p>Melhores Filosofos</p>
+    <div id="div_carrocel" class="carrocel">
+        <img src="assets_carrocel/gabriel.jpeg" class="ativa">
+        <img src="assets_carrocel/maaquiavel.webp">
+        <img src="assets_carrocel/platão_foto.avif">
+        <img src="assets_carrocel/socrates_foto.avif">
+    </div>
+    <div class="botoes_ant_pro">
+        <button onclick="anterior()">anterior</button>
+        <button onclick="proximo()">proxima</button>
+    </div>
+</section>
+
+<hr>
+
+<!-- ================= FILOSOFIA DE GABRIEL ================= -->
+<section id="filosofia-gabriel" class="section section-principal">
+    <h2>Frases do filósofo Gabriel</h2>
+    <h3>Segundo Gabriel (estilo Einstein)</h3>
+    <ul>
+        <li><strong>"A vida não examinada não vale a pena ser vivida."</strong> — Gabriel S. Machado</li>
+        <li><strong>"Somos o que repetidamente fazemos."</strong> — Gabriel S. Machado</li>
+        <li><strong>"O homem é livre no momento em que deseja ser."</strong> — Gabriel S. Machado</li>
+        <li><strong>"Viver é sofrer."</strong> — Gabriel S. Machado</li>
+    </ul>
+</section>
+
+<hr>
+
+<!-- ================= REFLEXÕES GABRIEL ================= -->
+<section id="reflexoes-gabriel" class="section section-secundaria">
+    <h2>Reflexões sobre a vida — Gabriel S. Machado</h2>
+    <ul>
+        <li><strong>
+            Ao longo da história, filósofos buscaram compreender o sentido da vida.
+        </strong></li>
+        <br>
+        <li><strong>
+            Pensamentos que incentivam o crescimento pessoal.
+        </strong></li>
+    </ul>
+</section>
+
+<hr>
+
+<!-- ================= REFLEXÕES FILÓSOFOS EXTERNOS ================= -->
+<section id="reflexoes-externos" class="section section-terciaria">
+    <h2>Reflexões — Filósofos Externos</h2>
+    <ul>
+        <li><strong>"A maior riqueza é viver contente com pouco."</strong> — Platão</li>
+        <li><strong>"A dúvida é o princípio da sabedoria."</strong> — Descartes</li>
+        <li><strong>"O homem é condenado a ser livre."</strong> — Sartre</li>
+        <li><strong>"A paciência alcança tudo."</strong> — Lao-Tsé</li>
+        <li><strong>"A vida oscila entre dor e tédio."</strong> — Schopenhauer</li>
+    </ul>
+</section>
+
+<hr>
+
+<!-- ================= TABELA FRASES ================= -->
+<section id="tabela-frases" class="section table-section">
+    <h2>Frases Filosóficas</h2>
+
+    <table class="table-filosofos" border="1">
+        <thead>
+            <tr>
+                <th>Filósofo</th>
+                <th>Frase</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>Sócrates</td>
+                <td>Conhece-te a ti mesmo.</td>
+            </tr>
+            <tr>
+                <td>Aristóteles</td>
+                <td>A felicidade depende do interior.</td>
+            </tr>
+            <tr>
+                <td>Nietzsche</td>
+                <td>Quem tem um porquê suporta qualquer como.</td>
+            </tr>
+            <tr>
+                <td>Confúcio</td>
+                <td>A vida é simples.</td>
+            </tr>
+        </tbody>
+    </table>
+</section>
+
+<hr>
+
+<!-- ================= TABELA VISÃO ================= -->
+<section id="tabela-visao" class="section table-section">
+    <h2>Visão dos Filósofos sobre a Vida</h2>
+
+    <table class="table-visao" border="1">
+        <thead>
+            <tr>
+                <th>Filósofo</th>
+                <th>Corrente</th>
+                <th>Visão</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>Platão</td>
+                <td>Platonismo</td>
+                <td>Busca da verdade</td>
+            </tr>
+            <tr>
+                <td>Aristóteles</td>
+                <td>Virtudes</td>
+                <td>Equilíbrio</td>
+            </tr>
+            <tr>
+                <td>Epicteto</td>
+                <td>Estoicismo</td>
+                <td>Controle interno</td>
+            </tr>
+            <tr>
+                <td>Sartre</td>
+                <td>Existencialismo</td>
+                <td>Liberdade</td>
+            </tr>
+        </tbody>
+    </table>
+</section>
+
+</main>
+
+<!-- ================= RODAPÉ ================= -->
+<footer class="footer-site">
+    <p>&copy; 2026 Gabriel. Todos os direitos reservados.</p>
+    <p>Projeto educacional.</p>
+</footer>
+
+<script src="js/JavaScript.js" defer></script>
+<script src="js/interacao.js" defer></script>
+<script src="js/carrocel.js" defer></script>
+
+
+<script>
+if ('serviceWorker' in navigator) 
+{
+    navigator.serviceWorker.register('/service-worker.js')
+    .then(() => console.log('Service Worker registrado'))
+    .catch(err => console.warn('SW falhou:', err));
+}
+</script>
+ 
+</body>
+</html>

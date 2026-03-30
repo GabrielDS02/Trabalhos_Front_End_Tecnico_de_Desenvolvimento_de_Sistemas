@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Envio Realizado com Sucesso</title>
+
+<style>
+body 
+{
+  margin: 0;
+  font-family: 'Segoe UI', sans-serif;
+  background: linear-gradient(135deg, #1e1e2f, #2b0a3d);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  color: white;
+}
+
+.container 
+{
+  background: rgba(255,255,255,0.05);
+  backdrop-filter: blur(10px);
+  padding: 40px;
+  border-radius: 20px;
+  width: 400px;
+  text-align: center;
+  box-shadow: 0 15px 40px rgba(0,0,0,0.4);
+  animation: fadeIn 0.8s ease forwards;
+}
+
+.checkmark 
+{
+  font-size: 60px;
+  color: #00ff88;
+  animation: pop 0.6s ease;
+}
+
+h1 
+{
+  margin: 15px 0;
+  font-size: 22px;
+}
+
+.info 
+{
+  margin-top: 20px;
+  text-align: left;
+  font-size: 14px;
+  line-height: 1.8;
+}
+
+.btn 
+{
+  margin-top: 25px;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 8px;
+  background: #00ff88;
+  color: #1e1e2f;
+  font-weight: bold;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.btn:hover 
+{
+  transform: scale(1.05);
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(20px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes pop {
+  0% { transform: scale(0); }
+  80% { transform: scale(1.2); }
+  100% { transform: scale(1); }
+}
+</style>
+</head>
+
+<body>
+
+<div class="container">
+  <div class="checkmark">✔</div>
+  <h1>Formulário enviado com sucesso!</h1>
+  <h3>Dados Cadastrados</h3>
+
+  <div class="info">
+    <p><strong>Nome:</strong> <span id="nome"></span></p>
+    <p><strong>Data de Nascimento:</strong> <span id="data"></span></p>
+    <p><strong>Email:</strong> <span id="email"></span></p>
+    <p><strong>Senha:</strong> <span id="senha"></span></p>
+    <p><strong>Genero:</strong> <span id="genero"></span></p>
+    <p><strong>Curso:</strong> <span id="curso"></span></p>
+  </div>
+
+  <button class="btn" onclick="voltar()">Voltar</button>
+</div>
+
+<script>
+const params = new URLSearchParams(window.location.search);
+
+document.getElementById("nome").textContent = params.get("Nome") || "Não informado";
+document.getElementById("data").textContent = params.get("data") || "Não informado";
+document.getElementById("email").textContent = params.get("email") || "Não informado";
+document.getElementById("senha").textContent = params.get("senha") || "Não informado";
+document.getElementById("genero").textContent = params.get("generoOutro") || "Não informado";
+document.getElementById("curso").textContent = params.get("curso") || "Não informado";
+
+function voltar() 
+{
+  window.location.href = "animacao.html";
+}
+</script>
+
+</body>
+</html>
